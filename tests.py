@@ -67,11 +67,11 @@ class ReadSwapRatesTest(TestCase):
 
     def test_bids(self):
         actual_data_frame = self.student_function(self.file, self.sheet, self.fromRow, self.numberOfRows, self.columnRange)
-        self.assertEqual(self.expected_data_frame.ix[:,0].tolist(), actual_data_frame.ix[:,0].tolist())
+        self.assertEqual(self.expected_data_frame.iloc[:,0].tolist(), actual_data_frame.iloc[:,0].tolist())
 
     def test_asks(self):
         actual_data_frame = self.student_function(self.file, self.sheet, self.fromRow, self.numberOfRows, self.columnRange)
-        self.assertEqual(self.expected_data_frame.ix[:,1].tolist(), actual_data_frame.ix[:,1].tolist())
+        self.assertEqual(self.expected_data_frame.iloc[:,1].tolist(), actual_data_frame.iloc[:,1].tolist())
 
 
 class ExtractDatesAndMidRatesTest(TestCase):
